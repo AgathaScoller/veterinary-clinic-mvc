@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Pet</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var customer in ViewBag.Customers)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.CPF</td>
+                <td>@customer.Email</td>
+                <td>@customer.Pet</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+
+<h2>Suppliers</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>CNPJ</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var supplier in ViewBag.Suppliers)
+        {
+            <tr>
+                <td>@supplier.Id</td>
+                <td>@supplier.Name</td>
+                <td>@supplier.CNPJ</td>
+                <td>@supplier.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
